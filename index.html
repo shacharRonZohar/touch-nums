@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Touch Nums</title>
+</head>
+
+<body onload="init()">
+    <div class="upper">
+        <div class="level-select">
+            <button onclick="changeDiff(16)">easy</button>
+            <button onclick="changeDiff(25)">medium</button>
+            <button onclick="changeDiff(36)">hard</button>
+            <button onclick="startGame()">Start Game</button>
+            <button onclick="init()">Restart Game</button>
+        </div>
+        <div class="timer-display">Current Round Time: <span></span></div>
+        <div class="next-num-display">Next Num: <span></span></div>
+        <button class="random-mode" onclick="toggleRandomMode(this)">Random Mode: <span>Off</span></button>
+    </div>
+    <table class="board-container">
+        <tbody class="board">
+
+        </tbody>
+    </table>
+    <div class="modal">
+        <h1>You Won!
+            <br><button class="restart-btn" onclick="init()">Restart</button>
+        </h1>
+    </div>
+    <script src="js/util.js"></script>
+    <script src="js/touchNums.js"></script>
+</body>
+
+</html>
